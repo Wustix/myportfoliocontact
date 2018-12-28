@@ -1,0 +1,23 @@
+.navbar {
+    height: 300px;
+}
+
+.navbar-toggler {
+    height: 100px;
+    width: 150px;
+}
+
+a {
+    color: white;
+    font-size: 24px;
+    margin-left: 15px;
+}
+
+a:first-child {
+    margin-left: 0;
+}
+
+#profile-pic {
+    height: 280px;
+    width: 375px;
+}
