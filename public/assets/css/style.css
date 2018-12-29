@@ -25,10 +25,28 @@ a:first-child {
     width: 375px;
 }
 
+#portfolio-pic {
+    height: 500px;
+    width: 750px;
+}
+
 img {
     height: 400px;
     width: 500px;
     
     animation-delay: 0.25s;
     animation-iteration-count: 1;
+}
+
+#img-container {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+#column-2 {
+    margin-left: 5%;
+}
+
+.row {
+    width: 1600px;
 }
