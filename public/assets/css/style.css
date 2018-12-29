@@ -24,3 +24,11 @@ a:first-child {
     height: 280px;
     width: 375px;
 }
+
+img {
+    height: 400px;
+    width: 500px;
+    
+    animation-delay: 0.25s;
+    animation-iteration-count: 1;
+}
