@@ -38,6 +38,11 @@ img {
     animation-iteration-count: 1;
 }
 
+.row {
+    animation-delay: 0.25s;
+    animation-iteration-count: 1;
+}
+
 #img-container {
     margin-left: 3%;
     margin-right: 3%;
