@@ -1,13 +1,14 @@
 require('dotenv').config();
+var bodyParser = require("body-parser");
 var nodemailer = require('nodemailer');
 
 
 // POST route from contact form
 module.exports = function (app) {
 
-  // app.use(bodyParser.urlencoded({ extended: true }));
+  app.use(bodyParser.urlencoded({ extended: true }));
   // parse application/json
-  // app.use(bodyParser.json());
+  app.use(bodyParser.json());
 
   app.post('/contact', function (req, res) {
     var output = `
