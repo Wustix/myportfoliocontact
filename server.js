@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 
 app.set("view engine","html");
-app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use(express.static("public"));
 
 require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
