@@ -1,4 +1,4 @@
 exports.gmail = {
-    id: process.env.GMAIL_USER,
-    secret: process.env.GMAIL_PASS
+    user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_PASS
   };
