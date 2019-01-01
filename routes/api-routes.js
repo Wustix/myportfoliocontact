@@ -4,6 +4,11 @@ var nodemailer = require('nodemailer');
 
 // POST route from contact form
 module.exports = function (app) {
+
+  app.use(bodyParser.urlencoded({ extended: true }));
+  // parse application/json
+  app.use(bodyParser.json());
+
   app.post('/contact', function (req, res) {
     var output = `
     <p>You have a new contact request</p>
@@ -17,12 +22,10 @@ module.exports = function (app) {
     `;
 
     let transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false, // true for 465, false for other ports
+      service: 'gmail',
       auth: {
         user: process.env.GMAIL_USER,  // generated ethereal user
-        pass: process.env.GMAIL_PASS // generated ethereal password
+        pass: process.env.GMAIL_PASS
       }
       // tls: {
       //   rejectUnauthorized: false
@@ -30,7 +33,7 @@ module.exports = function (app) {
     });
 
     // setup email data with unicode symbols
-    let mailOptions = {
+    var mailOptions = {
       from: req.body.name + ' &lt;' + req.body.email + '&gt;', // sender address
       to: 'wroehrman@yahoo.com', // list of receivers
       subject: 'New message from contact at Wes Roehrman', // Subject line
@@ -38,6 +41,17 @@ module.exports = function (app) {
       html: output // html body
     };
 
+    // transporter.sendMail({
+    //   from: req.body.name + ' &lt;' + req.body.email + '&gt;', // sender address
+    //   to: 'wroehrman@yahoo.com', // list of receivers
+    //   subject: 'New message from contact at Wes Roehrman', // Subject line
+    //   text: 'I hope this message gets through!',
+    //   auth: {
+    //     user: 'user@example.com',
+    //     refreshToken: '1/XXxXxsss-xxxXXXXXxXxx0XXXxxXXx0x00xxx',
+    //     accessToken: 'ya29.Xx_XX0xxxxx-xX0X0XxXXxXxXXXxX0x',
+    //     expires: 1484314697598
+    //   }
     // send mail with defined transport object
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
