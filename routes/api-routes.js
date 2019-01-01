@@ -1,8 +1,6 @@
 require('dotenv').config();
 var nodemailer = require('nodemailer');
-var keys = require("../config/keys.js");
-// var GMAIL_USER = (keys.GMAIL_USER);
-// var GMAIL_PASS = (keys.GMAIL_PASS);
+
 
 // POST route from contact form
 module.exports = function (app) {
