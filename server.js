@@ -1,7 +1,7 @@
 
 // var path = require("path");
 
-var nodemailer = require('nodemailer');
+// var nodemailer = require('nodemailer');
 var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
     res.render("index", { user: req.user });
 });
 
-require("./routes/api-routes.js");
+require("./routes/api-routes.js")(app);
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function () {
