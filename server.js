@@ -18,6 +18,8 @@ app.get("/", (req, res) => {
     res.render("index", { user: req.user });
 });
 
+require("./routes/api-routes.js");
+
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function () {
     console.log("App listening on PORT:" + PORT);
