@@ -61,15 +61,15 @@ module.exports = function (app) {
       console.log('Message sent: %s', info.messageId);
       // Preview only available when sending through an Ethereal account
       console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-
-      alert("Email has been sent!");
-
-
-
-
-
-
-
     });
+    res.alert("Email has been sent!");
+
+
+
+
+
+
+
+
   });
 }
