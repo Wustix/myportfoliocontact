@@ -63,7 +63,7 @@ module.exports = function (app) {
       // Preview only available when sending through an Ethereal account
       console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
     });
-    alert("Email has been sent!");
+    // alert("Email has been sent!");
     res.redirect('/home');
 
 
