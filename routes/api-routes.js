@@ -64,7 +64,7 @@ module.exports = function (app) {
       console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
     });
     // alert("Email has been sent!");
-    res.redirect('/home');
+    res.redirect('/index');
 
 
 
