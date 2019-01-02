@@ -27,10 +27,10 @@ module.exports = function (app) {
       auth: {
         user: 'wustix54',  // generated ethereal user
         pass: 'Otis13jhawkhalo'
-      },
-      tls: {
-        rejectUnauthorized: false
       }
+      // tls: {
+      //   rejectUnauthorized: false
+      // }
     });
 
     // setup email data with unicode symbols
