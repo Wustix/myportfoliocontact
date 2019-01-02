@@ -1,13 +1,17 @@
-body {
-    background: yellow;
-}
+/* body {
+    background-image: url(../images/code_background.mov);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+} */
 .navbar {
-    height: 300px;
+    height: 100px;
 }
 
 .navbar-toggler {
-    height: 100px;
-    width: 150px;
+    height: 60px;
+    width: 90px;
 }
 
 a {
@@ -20,18 +24,29 @@ a:first-child {
     margin-left: 0;
 }
 
+#image-contain {
+    max-width: 100%;
+    margin: 0;
+}
 #profile-pic {
-    height: 280px;
-    width: 375px;
+    height: 300px;
+    width: 500px;
+    border-radius: 10px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    
+    
 }
 
-#portfolio-pic {
+/* #portfolio-pic {
     height: 500px;
     width: 750px;
-}
+} */
 
 img {
-    height: 400px;
+    height: 500px;
     width: 500px;
     
     animation-delay: 0.25s;
@@ -55,3 +70,28 @@ img {
 .row {
     width: 1600px;
 }
+
+input[type=text], textarea {
+    width: 100%;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+input[type=submit] {
+    background-color: #4aaaa5;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+} 
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+  }
+  
+ 
+  
