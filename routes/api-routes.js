@@ -25,8 +25,8 @@ module.exports = function (app) {
     let transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.GMAIL_USER,  // generated ethereal user
-        pass: process.env.GMAIL_PASS
+        user: process.env.S3_KEY,  // generated ethereal user
+        pass: process.env.S3_SECRET
       }
       // tls: {
       //   rejectUnauthorized: false
