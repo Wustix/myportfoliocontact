@@ -17,6 +17,10 @@
 </head>
 
 <body>
+    <video autoplay muted loop id="myVideo">
+        <source src="../assets/images/number_background.mov" type="video/mp4">
+    </video>
+
     <div class="pos-f-t">
         <div class="collapse" id="navbarToggleExternalContent">
             <div class="bg-dark p-4">
@@ -31,31 +35,30 @@
                 aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <img src="assets/images/my-headshot.jpg" id="profile-pic" alt="my headshot">
         </nav>
     </div>
 
-    <body>
 
-        <div class="container">
-            <section id="contact">
-                <h1>Contact</h1>
-                <section id="form">
-                    <form action="/contact" id="contact-form" method="post" role="form">
-                        <fieldset>
-                          <label for="name">Name &#42;</label>
-                          <input id="name" name="name" type="text" placeholder="Your name" required="required">
-                          <label for="email">Email &#42;</label>
-                          <input id="email" name="email" type="text" placeholder="Your email" required="required">
-                          <label for="message">Message &#42;</label>
-                          <textarea id="message" name="message" placeholder="Enter your message here" rows="8" required="required"></textarea>
-                          <button type="submit">Submit</button>
-                        </fieldset>
-                      </form>
-                </section>
+
+    <div class="container">
+        <section id="contact">
+            <h1>Contact</h1>
+            <section id="form">
+                <form action="/contact" id="contact-form" method="post" role="form">
+                    <fieldset>
+                        <label for="name">Name &#42;</label>
+                        <input id="name" name="name" type="text" placeholder="Your name" required="required">
+                        <label for="email">Email &#42;</label>
+                        <input id="email" name="email" type="text" placeholder="Your email" required="required">
+                        <label for="message">Message &#42;</label>
+                        <textarea id="message" name="message" placeholder="Enter your message here" rows="8" required="required"></textarea>
+                        <button type="submit">Submit</button>
+                    </fieldset>
+                </form>
             </section>
-        </div>
-    </body>
+        </section>
+    </div>
+
 
 
 
