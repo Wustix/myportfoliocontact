@@ -27,10 +27,10 @@ module.exports = function (app) {
       auth: {
         user: process.env.GMAIL_USER,  // generated ethereal user
         pass: process.env.GMAIL_PASS
+      },
+      tls: {
+        rejectUnauthorized: false
       }
-      // tls: {
-      //   rejectUnauthorized: false
-      // }
     });
 
     // setup email data with unicode symbols
