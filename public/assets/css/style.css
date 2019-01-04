@@ -5,6 +5,11 @@
     background-position: center;
     background-attachment: fixed;
 } */
+
+* {
+    box-sizing: border-box;
+  }
+
 .navbar {
     height: 100px;
 }
@@ -24,22 +29,16 @@ a:first-child {
     margin-left: 0;
 }
 
-#image-contain {
+#headshot-contain {
     max-width: 100%;
     margin: 0;
 }
 
-/* #solid-navbar {
-    z-index: 9;
-}
-
-#anchors {
-    z-index: 10;
-} */
 #message-cont {
     z-index: 5;
     background: black;
 }
+
 #profile-pic {
     height: 300px;
     width: 500px;
@@ -48,39 +47,49 @@ a:first-child {
     margin-right: auto;
     margin-left: auto;
     margin-top: 50px;
-    
-    
-}
-
-/* #portfolio-pic {
-    height: 500px;
-    width: 750px;
-} */
-
-img {
-    height: 500px;
-    width: 500px;
-    
-    animation-delay: 0.25s;
+    animation-delay: .75s;
     animation-iteration-count: 1;
+    
 }
 
 .row {
     animation-delay: 0.25s;
     animation-iteration-count: 1;
+    display: flex;
+}
+
+.column {
+    flex: 50%;
 }
 
 #img-container {
-    margin-left: 3%;
-    margin-right: 3%;
+    max-width: 100%;
 }
 
-#column-2 {
-    margin-left: 5%;
+.text-block {
+    position: absolute;
+    text-align: center;
+    background-color:#4aaaa5;
+    color: white;
+    padding: 10px 0px 10px 0px;
+    bottom: 5%;
+    margin: 0px;
+    width: 100%;    
 }
 
-.row {
-    width: 1600px;
+#pic-area {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#portfolio-pic {
+    width: 100%;
+    height: 105%;
+    padding-top: 5%;
+  
 }
 
 input[type=text], textarea {
