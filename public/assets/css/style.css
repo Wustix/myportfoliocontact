@@ -20,9 +20,17 @@
 }
 
 a {
-    color: white;
+    color: black;
     font-size: 24px;
     margin-left: 15px;
+}
+
+.navbar, .p-4 {
+    background-color: rgba(112,112,112)
+}
+
+a:hover {
+    color: white;
 }
 
 a:first-child {
@@ -34,8 +42,10 @@ a:first-child {
     margin: 0;
     background-color: rgba(0,0,0,.65);
     color: white;
-    font-size: 18px;
+    font-size: 24px;
+    line-height: 1.6;
     margin-top: 25px;
+    padding-top: 25px;
     
 }
 
@@ -71,11 +81,14 @@ a:first-child {
     max-width: 100%;
 }
 
+#portlink {
+    color: black;
+}
+
 .text-block {
     position: absolute;
     text-align: center;
-    background-color:#4aaaa5;
-    color: white;
+    background-color: rgba(000,191,255, 0.75);
     padding: 10px 0px 10px 0px;
     bottom: 5%;
     margin: 0px;
@@ -92,7 +105,7 @@ a:first-child {
 
 #portfolio-pic {
     width: 100%;
-    height: 105%;
+    height: 100%;
     padding-top: 5%;
   
 }
@@ -121,11 +134,12 @@ input[type=submit] {
 
 #resume-body {
     background: white;
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
     margin-top: 25px;
     margin-bottom: 25px;
-    padding: 25px 10px 25px 10px;
+    padding: 25px 25px 25px 25px;
+    line-height: 1.3;
 }
 
 #contact {
@@ -133,6 +147,24 @@ input[type=submit] {
 }
 h1 {
     font-size: 24px;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+h3 {
+    font-weight: 700;
+}
+
+ul {
+    margin-left: 40px;
+}
+
+li {
+    list-style-type: disc;
 }
 
 #head-name, #contact-info {
@@ -150,7 +182,7 @@ h1 {
 }
 
 #brand-statement {
-    margin-top: 25px;
+    padding: 25px 0px 25px 0px;
 }
   
  
