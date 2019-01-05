@@ -26,7 +26,7 @@ module.exports = function (app) {
       service: 'gmail',
       auth: {
         user: process.env.S3_KEY,  // generated ethereal user
-        pass: process.env.S3_SECRET
+        pass: process.env.Josey13sirihalo
       }
 
     });
