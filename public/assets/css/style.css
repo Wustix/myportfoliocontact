@@ -1,23 +1,23 @@
-/* body {
-    background-image: url(../images/code_background.mov);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-} */
-
+/* 
+===== General Styling =====
+ */
 * {
     box-sizing: border-box;
   }
+  
+/* Background Style the video: 100% width and height to cover the entire window */
 
-.navbar {
-    height: 100px;
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
 }
 
-.navbar-toggler {
-    height: 60px;
-    width: 90px;
-}
+  /* 
+  ===== Navbar Styling =====
+  */
 
 a {
     color: black;
@@ -25,16 +25,33 @@ a {
     margin-left: 15px;
 }
 
-.navbar, .p-4 {
-    background-color: rgba(112,112,112)
+a:first-child {
+    margin-left: 0;
 }
 
 a:hover {
     color: white;
 }
 
-a:first-child {
-    margin-left: 0;
+.navbar {
+    height: 100px;
+}
+
+.navbar, .p-4 {
+    background-color: rgba(112,112,112)
+}
+
+.navbar-toggler {
+    height: 60px;
+    width: 90px;
+}
+
+/*
+----- Homepage Styling -----
+*/
+
+#brand-statement {
+    padding: 25px 0px 25px 0px;
 }
 
 #headshot-contain {
@@ -47,11 +64,6 @@ a:first-child {
     margin-top: 25px;
     padding-top: 25px;
     
-}
-
-#message-cont {
-    z-index: 5;
-    background: black;
 }
 
 #profile-pic {
@@ -67,11 +79,9 @@ a:first-child {
     
 }
 
-.row {
-    animation-delay: 0.25s;
-    animation-iteration-count: 1;
-    display: flex;
-}
+/*
+----- Portfolio Page Styling -----
+*/
 
 .column {
     flex: 50%;
@@ -81,18 +91,10 @@ a:first-child {
     max-width: 100%;
 }
 
-#portlink {
-    color: black;
-}
-
-.text-block {
-    position: absolute;
-    text-align: center;
-    background-color: rgba(000,191,255, 0.75);
-    padding: 10px 0px 10px 0px;
-    bottom: 5%;
-    margin: 0px;
-    width: 100%;    
+.row {
+    animation-delay: 0.25s;
+    animation-iteration-count: 1;
+    display: flex;
 }
 
 #pic-area {
@@ -110,11 +112,47 @@ a:first-child {
   
 }
 
+#portlink {
+    color: black;
+}
+
+.text-block {
+    position: absolute;
+    text-align: center;
+    background-color: rgba(000,191,255, 0.75);
+    padding: 10px 0px 10px 0px;
+    bottom: 5%;
+    margin: 0px;
+    width: 100%;    
+}
+
+/*
+----- Contact Page styling -----
+*/
+
+#contact-area {
+    color: white;
+    margin: auto;
+    max-width: 600px;
+    padding-bottom: 30px;
+}
+
+#contact-links {
+    text-align: center;
+}
+
+#contact {
+    text-align: center;
+    font-size: 36px;
+    padding-bottom: 25px;
+}
+
 input[type=text], textarea {
     width: 100%;
     margin-top: 6px;
     margin-bottom: 16px;
 }
+
 input[type=submit] {
     background-color: #4aaaa5;
     color: #ffffff;
@@ -123,28 +161,27 @@ input[type=submit] {
     cursor: pointer;
 } 
 
-/* Style the video: 100% width and height to cover the entire window */
-#myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
+#message-cont {
+    max-width: 100%;
+    background-color: rgba(0,0,0,.65);
+    margin-top: 50px;
+    padding-top: 25px;
 }
 
-#resume-body {
-    background: white;
-    max-width: 1000px;
-    margin: auto;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    padding: 25px 25px 25px 25px;
-    line-height: 1.3;
+/*
+----- Resume Page styling -----
+*/
+
+#head-name, #contact-info {
+    text-align: center;    
 }
 
-#contact {
-    color: white;
+#links {
+    font-size: 16px;
+    color: dodgerblue;
+  
 }
+
 h1 {
     font-size: 24px;
     font-weight: 900;
@@ -167,23 +204,12 @@ li {
     list-style-type: disc;
 }
 
-#head-name, #contact-info {
-    text-align: center;    
-}
-
-#links {
-    font-size: 16px;
-    color: dodgerblue;
-  
-}
-
-#contact-links {
-    text-align: center;
-}
-
-#brand-statement {
-    padding: 25px 0px 25px 0px;
-}
-  
- 
-  
+#resume-body {
+    background: white;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 25px 25px 25px 25px;
+    line-height: 1.3;
+}  
