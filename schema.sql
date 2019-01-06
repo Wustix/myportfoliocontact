@@ -1,5 +1,5 @@
-DROP DATABASE IF EXISTS Message_db;
-CREATE DATABASE Message_db;
+DROP DATABASE IF EXISTS message_db;
+CREATE DATABASE message_db;
 
 
  CREATE TABLE categories (

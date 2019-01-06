@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-app.set("view engine","html");
+app.set("view engine", "html");
 app.use(express.static("public"));
 
 require("./routes/api-routes.js")(app);
@@ -25,8 +25,9 @@ app.get("/", (req, res) => {
 
 
 // Start our server so that it can begin listening to client requests.
-app.listen(PORT, function () {
-    console.log("App listening on PORT:" + PORT);
-})
+db.sequelize.sync().then(function () {
+    app.listen(PORT, function () {
+        console.log("App listening on PORT " + PORT);
+    });
+});
 
- 

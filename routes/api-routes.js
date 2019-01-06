@@ -1,4 +1,5 @@
 require('dotenv').config();
+var db = require("../models");
 var bodyParser = require("body-parser");
 var nodemailer = require('nodemailer');
 
@@ -50,6 +51,20 @@ module.exports = function (app) {
       // Preview only available when sending through an Ethereal account
       console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
     });
+
+    // POST route for saving a new post
+    app.post("/api/message", function (req, res) {
+      console.log(req.body);
+      db.Message.create({
+        name: req.body.name,
+        email: req.body.email,
+        message: req.body.message
+      })
+        .then(function (dbMessage) {
+          res.json(dbMessage);
+        });
+    });
+
     // alert("Email has been sent!");
     res.redirect('/');
 
