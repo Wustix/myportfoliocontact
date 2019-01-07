@@ -52,30 +52,26 @@ module.exports = function (app) {
       console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
     });
 
-    // POST route for saving a new post
-    app.post("/api/message", function (req, res) {
-      console.log(req.body);
-      db.Message.create({
-        name: req.body.name,
-        email: req.body.email,
-        message: req.body.message
-      })
-        .then(function (dbMessage) {
-          res.json(dbMessage);
-        });
-    });
+
 
     // alert("Email has been sent!");
     res.redirect('/');
 
-
-
-
-
-
-
   });
 
+
+  // POST route for saving a new post
+  app.post("/api/message", function (req, res) {
+    console.log(req.body);
+    db.Message.create({
+      name: req.body.name,
+      email: req.body.email,
+      message: req.body.message
+    })
+      .then(function (dbMessage) {
+        res.json(dbMessage);
+      });
+  });
 }
 
 // small change
