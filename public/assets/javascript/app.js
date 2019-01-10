@@ -1,7 +1,8 @@
 $(document).ready(function () {
 
 
-    var contactForm = $("#contact-Form");
+
+    var contactForm = $("#contact-form");
     var contactName = $("#name");
     var contactEmail = $("#email");
     var contactMessage = $("#message");
@@ -10,19 +11,38 @@ $(document).ready(function () {
         event.preventDefault();
 
         var newMessage = {
-            Name: contactName.val(),
-            Email: contactEmail.val(),
-            Message: contactMessage.val(),
+            name: contactName.val(),
+            email: contactEmail.val(),
+            message: contactMessage.val()
         };
-        console.log(newMessage);
-        submitMessage(newMessage);
-    });
 
-    // Submits a new post and brings user to home page upon completion
-    function submitMessage(newMessage) {
-        $.post("/api/message", newMessage, function () {
-            alert("Email has been sent!")
-            // window.location.href = "/home";
-        });
-    }
+
+        submitContact(newMessage);
+        submitMessage(newMessage);
+        console.log(newMessage);
+        myFunction();
+
+
+        // Submits a new post and brings user to home page upon completion
+        function submitContact(Contact) {
+            $.post("/api/contact", Contact, function () {
+                
+
+
+            });
+        }
+
+        function submitMessage(Message) {
+            $.post("/api/message", Message, function () {
+
+            });
+
+        }
+
+        function myFunction() {
+            alert("Email Sent!");
+            window.location.href = "/";
+        }
+
+    });
 });

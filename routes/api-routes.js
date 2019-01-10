@@ -11,7 +11,8 @@ module.exports = function (app) {
   // parse application/json
   app.use(bodyParser.json());
 
-  app.post('/contact', function (req, res) {
+
+  app.post('/api/contact', function (req, res) {
     var output = `
     <p>You have a new contact request</p>
     <h3>Contact Details</h3>
@@ -54,14 +55,10 @@ module.exports = function (app) {
 
 
 
-    // alert("Email has been sent!");
-    res.redirect('/');
-
   });
 
-
   // POST route for saving a new post
-  app.post("/api/message", function (req, res) {
+  app.post("/api/Message", function (req, res) {
     console.log(req.body);
     db.Message.create({
       name: req.body.name,
@@ -69,9 +66,13 @@ module.exports = function (app) {
       message: req.body.message
     })
       .then(function (dbMessage) {
-        res.json(dbMessage);
+        res.send(dbMessage);
       });
+
+
   });
+
+
 }
 
 // small change
