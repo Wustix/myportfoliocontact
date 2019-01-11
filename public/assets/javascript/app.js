@@ -18,31 +18,22 @@ $(document).ready(function () {
 
 
         submitContact(newMessage);
-        submitMessage(newMessage);
         console.log(newMessage);
-        myFunction();
 
 
         // Submits a new post and brings user to home page upon completion
         function submitContact(Contact) {
-            $.post("/api/contact", Contact, function () {
-                
+            $.post("/contact", Contact, function () {
+                $("#bestFriendModal").modal("toggle");
 
 
-            });
-        }
-
-        function submitMessage(Message) {
-            $.post("/api/message", Message, function () {
 
             });
-
         }
-
-        function myFunction() {
-            alert("Email Sent!");
-            window.location.href = "/";
-        }
-
     });
+
+    $("#modal-btn").on("click", function (event) {
+        event.preventDefault();
+        window.location.href = "/contact";
+    })
 });

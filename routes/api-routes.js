@@ -12,7 +12,7 @@ module.exports = function (app) {
   app.use(bodyParser.json());
 
 
-  app.post('/api/contact', function (req, res) {
+  app.post('/contact', function (req, res) {
     var output = `
     <p>You have a new contact request</p>
     <h3>Contact Details</h3>
@@ -23,6 +23,8 @@ module.exports = function (app) {
     <h3>Message</h3>
     <p>${req.body.message}</p>
     `;
+
+
 
     let transporter = nodemailer.createTransport({
       service: 'gmail',
@@ -47,18 +49,17 @@ module.exports = function (app) {
       if (error) {
         return console.log(error);
       }
+      else {
+        console.log("success");
+
+      }
 
       console.log('Message sent: %s', info.messageId);
       // Preview only available when sending through an Ethereal account
       console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+
     });
 
-
-
-  });
-
-  // POST route for saving a new post
-  app.post("/api/Message", function (req, res) {
     console.log(req.body);
     db.Message.create({
       name: req.body.name,
@@ -73,6 +74,6 @@ module.exports = function (app) {
   });
 
 
+
 }
 
-// small change
