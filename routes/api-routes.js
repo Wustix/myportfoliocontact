@@ -49,17 +49,14 @@ module.exports = function (app) {
       if (error) {
         return console.log(error);
       }
-      else {
-        console.log("success");
-
-      }
 
       console.log('Message sent: %s', info.messageId);
       // Preview only available when sending through an Ethereal account
       console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
-    });
 
+    });
+    // res.redirect("/");
     console.log(req.body);
     db.Message.create({
       name: req.body.name,
