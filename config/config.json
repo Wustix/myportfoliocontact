@@ -1,4 +1,12 @@
 {
+  "production": {
+    "username": "cw848oyb25jydz1h",
+    "password": "m1m145xhhx755s4o",
+    "database": "rwn77pygov6iedxx",
+    "host": "umabrisfx8afs3ja.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "port": 3306,
+    "dialect": "mysql"
+  },
   "development": {
     "username": "root",
     "password": "Otis13jhawkhalo",
@@ -11,14 +19,6 @@
     "username": "root",
     "password": "Otis13jhawkhalo",
     "database": "message",
-    "host": "127.0.0.1",
-    "port": 3306,
-    "dialect": "mysql"
-  },
-  "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
     "host": "127.0.0.1",
     "port": 3306,
     "dialect": "mysql"
