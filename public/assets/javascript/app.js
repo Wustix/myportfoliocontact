@@ -25,13 +25,17 @@ $(document).ready(function () {
         function submitContact(Contact) {
             $.post("/contact", Contact, function () {
                 $("#bestFriendModal").modal("toggle");
+                // $.post("/contact", Contact).done(function (recieveData, status, xhr) {
+                //     alert(xhr.status);
+                // });
 
 
 
 
 
 
-            });
+
+            })
         }
     });
 

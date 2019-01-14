@@ -49,6 +49,9 @@ module.exports = function (app) {
       if (error) {
         return console.log(error);
       }
+      // else {
+      //   res.status(201).send('Email sent successfully!');
+      // }
 
       console.log('Message sent: %s', info.messageId);
       // Preview only available when sending through an Ethereal account
