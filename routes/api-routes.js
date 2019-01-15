@@ -47,11 +47,12 @@ module.exports = function (app) {
     // send mail with defined transport object
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
+        res.status(500).send("Email not sent!")
         return console.log(error);
       }
-      // else {
-      //   res.status(201).send('Email sent successfully!');
-      // }
+      else {
+        res.status(200).send('Email sent successfully!');
+      }
 
       console.log('Message sent: %s', info.messageId);
       // Preview only available when sending through an Ethereal account
@@ -59,7 +60,13 @@ module.exports = function (app) {
 
 
     });
-    // res.redirect("/");
+    
+
+
+
+  });
+
+  app.post('/message', function (req, res) {
     console.log(req.body);
     db.Message.create({
       name: req.body.name,
@@ -69,11 +76,6 @@ module.exports = function (app) {
       .then(function (dbMessage) {
         res.send(dbMessage);
       });
-
-
   });
-
-
-
 }
 
