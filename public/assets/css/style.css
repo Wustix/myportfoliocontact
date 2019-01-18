@@ -94,8 +94,13 @@ i {
 .column {
     flex: 45%;
     background-color: rgba(0,0,0,.65);
-    margin: 20px 20px 20px 20px;
+    margin: 20px;
 }
+
+#card-summary {
+    font-size: 20px;
+}
+
 
 .flip-card {
     background-color: transparent;
@@ -104,7 +109,11 @@ i {
     perspective: 1000px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;
+    margin-top: 45px;
+}
+
+.flip-card:last-child {
+    margin-bottom: 45px;
 }
   
 .flip-card-inner {
