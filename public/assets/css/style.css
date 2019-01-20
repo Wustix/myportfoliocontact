@@ -66,12 +66,16 @@ a:hover {
     
 }
 
-#icon-grid {
+#icon-grid, #social-links {
     text-align: center;
 }
 
 i {
     padding-right: 10px;
+}
+
+#linkedin-link {
+    color: white;
 }
 
 #profile-pic {
